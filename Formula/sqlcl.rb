@@ -18,9 +18,9 @@ end
 class Sqlcl < Formula
   desc "Free, Java-based command-line interface for Oracle databases"
   homepage "https://www.oracle.com/database/technologies/appdev/sqlcl.html"
-  url "file://#{HOMEBREW_CACHE}/sqlcl-21.1.1.113.1704.zip",
+  url "file://#{HOMEBREW_CACHE}/sqlcl-21.3.0.278.1045.zip",
     using: CacheDownloadStrategy
-  sha256 "ac31dc1bef29bbf972f35d000a4ef9669941038ff503655ac804e35df15e1dfc"
+  sha256 "e9d0cbf6df9de57daf437b7c9125cdcccf1e478028946392f180bc0a3a42c908"
 
   depends_on arch: :x86_64
   depends_on "openjdk"
@@ -30,7 +30,7 @@ class Sqlcl < Formula
     rm_f "bin/sql.exe"
 
     prefix.install "README.md", "bin/license.txt"
-    rm_f "21.1.1.113.1704"
+    rm_f "21.3.0.278.1045"
     rm_f "bin/README.md"
     rm_f "bin/dependencies.txt"
     rm_f "bin/version.txt"
@@ -45,3 +45,4 @@ class Sqlcl < Formula
     system bin/"sqlcl", "-V"
   end
 end
+
